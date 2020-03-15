@@ -6,3 +6,7 @@ LibraryComponents/debug.log
 
 # Игнорирование скомпилированных библиотек
 *.IntLib
+
+# Игнорирование отчетов и логов AD
+*.htm
+*.html
