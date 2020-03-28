@@ -76,10 +76,6 @@ git clone https://github.com/Nordic-Energy/AltiumLibrary.git
 
 ![Установка шрифта](https://habrastorage.org/webt/qf/rh/5f/qfrh5fs5psps2wzqnzgrwbppxxa.png)
 
-# Контакты для связи
-* Электронная почта: ilya@nordic-energy.org
-* Канал на youtube: https://www.youtube.com/NordicEnergy
-
 
 
 
