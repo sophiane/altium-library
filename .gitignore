@@ -1,8 +1,8 @@
 # Игнорирование папки с временными копиями
-LibraryComponents/History/
+library-components/History/
 
 # Игнорирование файла с логами
-LibraryComponents/debug.log
+library-components/debug.log
 
 # Игнорирование скомпилированных библиотек
 *.IntLib
