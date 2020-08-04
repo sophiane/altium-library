@@ -3,72 +3,73 @@
 
 ![Пример дизайна](https://habrastorage.org/webt/lv/_v/vo/lv_vvojmxbw4kgr854siiyvor2i.png)
 
-# Структура проекта
+## 1. Структура проекта
 
 * Библиотеки компонентов
     >
-    * IC: Logic
-    * IC: Comparator
-    * IC: Amplifier
-    * IC: Sensor
-    * IC: MCU
-    * IC: FPGA
-    * IC: ADC, DAC, DDS
-    * IC: Memory
-    * IC: RF transceiver
-    * IC: Interface
-    * IC: Power supply
-    * IC: Gate driver
-    * Module
-    * Electromechanics
-    * Transformer
-    * Inductor
-    * Transistor
-    * Diode
-    * Connector
-    * Oscilator
-    * Optoisolator
-    * Resistor
-    * Capacitor
+    * ic-adc-dac-dds
+    * ic-amplifier
+    * ic-comparator
+    * ic-fpga
+    * ic-gate-driver
+    * ic-interface
+    * ic-logic
+    * ic-mcu
+    * ic-memory
+    * ic-power-module
+    * ic-power-supply
+    * ic-rf-transceiver
+    * ic-sensor
+    * capacitor
+    * resistor
+    * diode
+    * electromechanics
+    * inductor
+    * transformer
+    * transistor
+    * optoisolator
+    * oscilator
+    * module
+    * connector
 
 >
 
 * Шаблоны файлов и правил
     >
-    * SchematicPage - стандартные листы для ЕСКД и ISO
-    * BoardPCB - шаблоны для печатных плат
-    * Rules - правила трассировки для разных классов точности
+    * **schematic-page** - стандартные листы для ЕСКД и ISO
+    * **board-pcb** - шаблоны для печатных плат
+    * **rules-pcb** - правила трассировки для разных классов точности
 
-# Установка библиотеки
+## 2. Установка библиотеки
 
 Скачайте архив с библиотекой или клонируйте репозиторий к себе на локальный диск:
 ```
-git clone https://github.com/Nordic-Energy/AltiumLibrary.git
+git clone https://github.com/RedCommissary/altium-library
 ```
-После этого переходите в папку *LibraryComponents* и видите список файлов библиотеки компонентов:
+После этого переходите в папку *library* и видите список файлов библиотеки компонентов:
 
-![Список файлов](https://habrastorage.org/webt/gq/yi/lp/gqyilpiaiied2tomg-plan0nslg.png)
+![Список файлов](https://habrastorage.org/webt/qq/xt/sc/qqxtscxspnrjoh1lco4efkq6l68.png)
 
 Все библиотеки состоят из четырых файлов: 
 
-* Файлы с расширением .LibPkg - объединяют все последующие файлы проекта
-* Файлы с расширением .SchLib - содержат УГО компонентов
-* StandartCase.PcbLib - содержит посадочные места для стандартных корпусов, например, LQFP-48 и подобные
-* CustomCase.PcbLib - содержит посадочные места для нестандартных компонентов, например, разъемов
+* Файлы с расширением *.LibPkg* - объединяют все последующие файлы проекта
+* Файлы с расширением *.SchLib* - содержат УГО компонентов
+* *standard-case.PcbLib* - содержит посадочные места для стандартных корпусов, например, LQFP-48 и подобные
+* *custom-case.PcbLib* - содержит посадочные места для нестандартных компонентов, например, разъемов
 
-Для установки нужной библиотеки откройте файл с расширением ***.LibPkg*** в Altium Designer, например, ***IC. ADC, DAC, DDS.LibPkg*** и у вас в дереве проектов появится библиотека и три файла внутри нее:
+Для установки нужной библиотеки откройте файл с расширением ***.LibPkg*** в Altium Designer, например, ***ic-amplifier.LibPkg*** и у вас в дереве проектов появится библиотека и три файла внутри нее:
 
-![Дерево проектов](https://habrastorage.org/webt/qj/7q/ze/qj7qzea6pmnlmb7regqanuri0ri.png)
+![Дерево проектов](https://habrastorage.org/webt/ux/dc/7p/uxdc7pctxs16ytibvk4xtvpmxp0.png)
 
 Теперь нажимайте правой кнопкой мыши на название проекта и выбирайте пункт ***Compile Integrated Library***:
 
-![Компиляция проекта](https://habrastorage.org/webt/1p/at/nk/1patnk16twt8potkibvg7ey5-ao.png)
+![Компиляция проекта](https://habrastorage.org/webt/qx/zw/oo/qxzwoody7nzjxpau4sth7xisoru.png)
 
 После этого у вас скомпилируется проект библиотеки, автоматически подключится к Altium Designer и появится в списке библиотек:
 
-![Скомпилированная библиотека](https://habrastorage.org/webt/io/mk/pp/iomkppp4u4cur8o4izf2q-tpx6u.png)
+![Скомпилированная библиотека](https://habrastorage.org/webt/2v/u1/ka/2vu1kazqr9kjn0-km5c-mr1nwv0.png)
 
-# Устранение ошибки отображения шрифта
+## 3. Устранение ошибки отображения шрифта
 
 После установки и начала использования данных библиотек, вы можете столкнуться с проблемой корректного отображения надписей на УГО компонентов. Существует несколько версий шрифта **ISOCPEUR**, поэтому для корректного отображения надписей на УГО компонентов библиотеки, необходимо **[установить шрифт](https://ofont.ru/view/4280)**. После данной операции у вас все тексты и надписи будут корректно отображаться.
 
