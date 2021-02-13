@@ -18,7 +18,6 @@
     * ic-memory
     * ic-power-module
     * ic-power-supply
-    * ic-rf-transceiver
     * ic-sensor
     * capacitor
     * resistor
