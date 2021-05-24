@@ -1,12 +1,14 @@
-# Игнорирование папки с временными копиями
+# Ignore folders with history and logs
 library/History/
+template/schematic-page/History/
+template/schematic-page/__Previews/
 
-# Игнорирование файла с логами
+# Ignore files with logs
 library/debug.log
 
-# Игнорирование скомпилированных библиотек
+# Ignore compiled library
 *.IntLib
 
-# Игнорирование отчетов и логов AD
+# Ignore list and logs to Altium Designer
 *.htm
 *.html
