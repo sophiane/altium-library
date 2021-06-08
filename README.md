@@ -1,87 +1,74 @@
-﻿# Библиотека компонентов для Altium Designer
-Данная библиотека является открытой и используется автором для работы, а следовательно постоянно пополняется новыми компонентами. Условно-графические обозначения (УГО) компонентов, выполнены в стилистике ЕСКД, но автор не гарантирует полное соответствие. Посадочные места для компонентов выполнены в полном соответствии с группой стандартов IPC. Актуальная рабочая библиотека содержится в ветке *master*, основная часть компонентов в ней проверена на реальных платах. Сложные ответственные компоненты, например, FPGA в корпусах BGA, проходят усиленную проверку и до испытаний в "боевом" проекте находятся в ветке *dev*.
+﻿# Component library for Altium Designer
 
-![Пример дизайна](https://habrastorage.org/webt/lv/_v/vo/lv_vvojmxbw4kgr854siiyvor2i.png)
+![Design](https://habrastorage.org/webt/o2/s8/fw/o2s8fw2golbphnoueufbxm_1svo.png)
 
-## 1. Структура проекта
+## 1. Library structure
 
-* Библиотеки компонентов
+* Сomponent library
     >
     * ic-adc-dac-dds
-    * ic-amplifier
-    * ic-comparator
     * ic-fpga
     * ic-gate-driver
     * ic-interface
     * ic-logic
     * ic-mcu
     * ic-memory
-    * ic-power-module
+    * ic-op-comp
     * ic-power-supply
     * ic-sensor
+    * ic-soc-cpu
+    >
+    * board
     * capacitor
-    * resistor
+    * conenctor
     * diode
     * electromechanics
     * inductor
-    * transformer
-    * transistor
+    * module
     * optoisolator
     * oscilator
-    * module
-    * connector
-
+    * resistor
+    * transformer
+    * transistor
 >
 
-* Шаблоны файлов и правил
+* Templates and rules
     >
-    * **schematic-page** - стандартные листы для ЕСКД и ISO
-    * **board-pcb** - шаблоны для печатных плат
-    * **rules-pcb** - правила трассировки для разных классов точности
-
+    * **schematic-page** - template for schematic page
+    * **board-pcb** - template for PCB
+    * **rules-pcb** - rules for routing PCB
 >
 
-* Скрипты
+* Scripts
     >
-    * **logo-creator** - импорт изображений (bmp) в рисунок на слое шелкографии
+    * **logo-creator** - import pictures (bmp) to PCB in the layer
 
-## 2. Установка библиотеки
+## 2. Use library
 
-Скачайте архив с библиотекой или клонируйте репозиторий к себе на локальный диск:
+Download archive with library or clone repository to your local disk of computer:
 ```
 git clone https://github.com/RedCommissary/altium-library
 ```
-После этого переходите в папку *library* и видите список файлов библиотеки компонентов:
 
-![Список файлов](https://habrastorage.org/webt/qq/xt/sc/qqxtscxspnrjoh1lco4efkq6l68.png)
+Go to folder *library* and see list files with component library:
 
-Все библиотеки состоят из четырых файлов: 
+![List files](https://habrastorage.org/webt/un/ws/fp/unwsfpfom1csz8czsrtmujv9k2q.png)
 
-* Файлы с расширением *.LibPkg* - объединяют все последующие файлы проекта
-* Файлы с расширением *.SchLib* - содержат УГО компонентов
-* *standard-case.PcbLib* - содержит посадочные места для стандартных корпусов, например, LQFP-48 и подобные
-* *custom-case.PcbLib* - содержит посадочные места для нестандартных компонентов, например, разъемов
+Libraries are composed of four files:
 
-Для установки нужной библиотеки откройте файл с расширением ***.LibPkg*** в Altium Designer, например, ***ic-amplifier.LibPkg*** и у вас в дереве проектов появится библиотека и три файла внутри нее:
+* File with extension *.LibPkg* - project for library
+* File with extension *.SchLib* - files with components symbols
+* *standard-case.PcbLib* - contains footprint for standard case (LQFP48, D2pak, etc)
+* *custom-case.PcbLib* - contains footprint for custom case (connectors, transformer, etc)
 
-![Дерево проектов](https://habrastorage.org/webt/ux/dc/7p/uxdc7pctxs16ytibvk4xtvpmxp0.png)
+For installation library open to file with extension ***. LibPkg *** in the Altium Designer and you see 3 files in the project tree:
 
-Теперь нажимайте правой кнопкой мыши на название проекта и выбирайте пункт ***Compile Integrated Library***:
+![Project tree](https://habrastorage.org/webt/ux/dc/7p/uxdc7pctxs16ytibvk4xtvpmxp0.png)
 
-![Компиляция проекта](https://habrastorage.org/webt/qx/zw/oo/qxzwoody7nzjxpau4sth7xisoru.png)
+Click right mouse button on project name and select ***Compile Integrated Library***:
 
-После этого у вас скомпилируется проект библиотеки, автоматически подключится к Altium Designer и появится в списке библиотек:
+![Compilier project](https://habrastorage.org/webt/qx/zw/oo/qxzwoody7nzjxpau4sth7xisoru.png)
 
-![Скомпилированная библиотека](https://habrastorage.org/webt/2v/u1/ka/2vu1kazqr9kjn0-km5c-mr1nwv0.png)
+After this project to compile, automatically to connect in the Altium Designer and you see in list library:
 
-## 3. Устранение ошибки отображения шрифта
-
-После установки и начала использования данных библиотек, вы можете столкнуться с проблемой корректного отображения надписей на УГО компонентов. Существует несколько версий шрифта **ISOCPEUR**, поэтому для корректного отображения надписей на УГО компонентов библиотеки, необходимо **[установить шрифт](https://ofont.ru/view/4280)**. После данной операции у вас все тексты и надписи будут корректно отображаться.
-
->
-
-![Установка шрифта](https://habrastorage.org/webt/qf/rh/5f/qfrh5fs5psps2wzqnzgrwbppxxa.png)
-
-
-
-
+![Library](https://habrastorage.org/webt/2v/u1/ka/2vu1kazqr9kjn0-km5c-mr1nwv0.png)
