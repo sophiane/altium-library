@@ -1,10 +1,12 @@
-﻿# Component library for Altium Designer
+﻿# Components library for Altium Designer
 
-![Design](https://habrastorage.org/webt/o2/s8/fw/o2s8fw2golbphnoueufbxm_1svo.png)
+![Design](https://habrastorage.org/webt/lq/h4/ho/lqh4hozrhuvzutehwmodianotu0.jpeg)
+
+![Board](https://habrastorage.org/webt/gd/el/vf/gdelvfxfxwraphihixu0vzjeztq.jpeg)
 
 ## 1. Library structure
 
-* Сomponent library
+* Сomponents library
     >
     * ic-adc-dac-dds
     * ic-fpga
@@ -20,12 +22,12 @@
     >
     * board
     * capacitor
-    * conenctor
+    * connector
     * diode
     * electromechanics
     * inductor
     * module
-    * optoisolator
+    * isolator
     * oscilator
     * resistor
     * transformer
@@ -38,10 +40,6 @@
     * **board-pcb** - template for PCB
     * **rules-pcb** - rules for routing PCB
 >
-
-* Scripts
-    >
-    * **logo-creator** - import pictures (bmp) to PCB in the layer
 
 ## 2. Use library
 
@@ -58,8 +56,8 @@ Libraries are composed of four files:
 
 * File with extension *.LibPkg* - project for library
 * File with extension *.SchLib* - files with components symbols
-* *standard-case.PcbLib* - contains footprint for standard case (LQFP48, D2pak, etc)
-* *custom-case.PcbLib* - contains footprint for custom case (connectors, transformer, etc)
+* *footprint.PcbLib* - contains footprint for all cases (LQFP48, D2pak, etc)
+
 
 For installation library open to file with extension ***. LibPkg *** in the Altium Designer and you see 3 files in the project tree:
 
