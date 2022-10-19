@@ -2,8 +2,6 @@
 
 ![Design](https://habrastorage.org/webt/lq/h4/ho/lqh4hozrhuvzutehwmodianotu0.jpeg)
 
-![Board](https://habrastorage.org/webt/gd/el/vf/gdelvfxfxwraphihixu0vzjeztq.jpeg)
-
 ## 1. Library structure
 
 * Сomponents library
