@@ -80,7 +80,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=PEGWBXQF
+DocumentUniqueId=ZMDQCIQM
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -780,6 +780,7 @@ Type116=1
 Type117=1
 Type118=1
 Type119=1
+Type120=1
 
 [Difference Levels]
 Type1=1
