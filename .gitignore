@@ -4,7 +4,7 @@ template/schematic-page/History/
 template/schematic-page/__Previews/
 
 # Ignore files with logs
-library/debug.log
+*.log
 
 # Ignore compiled library
 *.IntLib
